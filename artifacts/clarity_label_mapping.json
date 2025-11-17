@@ -1,0 +1,12 @@
+{
+  "label2id": {
+    "Ambivalent": 0,
+    "Clear Non-Reply": 1,
+    "Clear Reply": 2
+  },
+  "id2label": {
+    "0": "Ambivalent",
+    "1": "Clear Non-Reply",
+    "2": "Clear Reply"
+  }
+}

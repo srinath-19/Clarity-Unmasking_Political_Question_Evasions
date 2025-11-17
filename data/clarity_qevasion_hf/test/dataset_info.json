@@ -1,0 +1,124 @@
+{
+  "builder_name": "parquet",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "q_evasion",
+  "dataset_size": 15659307,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/ailsntua/QEvasion@3afc18f0b582b3cfdb927822cff57ddc6e871f9c/data/train-00000-of-00001.parquet": {
+      "num_bytes": 3898012,
+      "checksum": null
+    },
+    "hf://datasets/ailsntua/QEvasion@3afc18f0b582b3cfdb927822cff57ddc6e871f9c/data/test-00000-of-00001.parquet": {
+      "num_bytes": 258928,
+      "checksum": null
+    }
+  },
+  "download_size": 4156940,
+  "features": {
+    "title": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "date": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "president": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "url": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "question_order": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "interview_question": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "interview_answer": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "gpt3.5_summary": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "gpt3.5_prediction": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "question": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "annotator_id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "annotator1": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "annotator2": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "annotator3": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "inaudible": {
+      "dtype": "bool",
+      "_type": "Value"
+    },
+    "multiple_questions": {
+      "dtype": "bool",
+      "_type": "Value"
+    },
+    "affirmative_questions": {
+      "dtype": "bool",
+      "_type": "Value"
+    },
+    "index": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "clarity_label": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "evasion_label": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 19816247,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 14891017,
+      "num_examples": 3448,
+      "dataset_name": "q_evasion"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 768290,
+      "num_examples": 308,
+      "dataset_name": "q_evasion"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

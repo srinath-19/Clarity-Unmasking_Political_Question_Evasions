@@ -33,7 +33,7 @@ def tokenize_texts(tokenizer, texts):
         truncation=True,
         padding=True,
         max_length=MAX_LENGTH,
-        return_tensors="pt",  # 回傳 PyTorch tensor
+        return_tensors="pt",
     )
     return encodings
 
@@ -43,11 +43,11 @@ def process_split(split_name: str, csv_path: Path, tokenizer):
     print("🔹 Loading data from:", csv_path)
 
     df, texts = load_texts(csv_path)
-    print(f"✅ Loaded {len(df)} samples")
+    print(f" Loaded {len(df)} samples")
 
     encodings = tokenize_texts(tokenizer, texts)
 
-    print("✅ Tokenization done")
+    print(" Tokenization done")
     print("   input_ids shape:", encodings["input_ids"].shape)
     print("   attention_mask shape:", encodings["attention_mask"].shape)
 
@@ -76,12 +76,12 @@ def process_split(split_name: str, csv_path: Path, tokenizer):
 
 
 def main():
-    print("🔹 Initializing tokenizer:", MODEL_NAME)
+    print(" Initializing tokenizer:", MODEL_NAME)
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 
     for split_name, csv_path in SPLITS.items():
         if not csv_path.exists():
-            print(f"⚠️  Skip {split_name}: file not found -> {csv_path}")
+            print(f"  Skip {split_name}: file not found -> {csv_path}")
             continue
         process_split(split_name, csv_path, tokenizer)
 

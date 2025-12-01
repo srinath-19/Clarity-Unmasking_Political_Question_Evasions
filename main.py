@@ -1,4 +1,5 @@
 import torch
-
-train_data = torch.load("data/tokenized/train_tokenized.pt")
-test_data = torch.load("data/tokenized/test_tokenized.pt")
+print("cuda available:", torch.cuda.is_available())
+if torch.cuda.is_available():
+    print("device:", torch.cuda.current_device())
+    print("name:", torch.cuda.get_device_name(0))

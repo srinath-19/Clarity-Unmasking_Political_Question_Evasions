@@ -11,7 +11,7 @@ DATA_DIR = PROJECT_ROOT / "data"
 ARTIFACTS_DIR = PROJECT_ROOT / "artifacts"
 
 VAL_PATH = DATA_DIR / "clarity_validation_for_model.csv"
-MODEL_DIR = ARTIFACTS_DIR / "clarity_deberta"
+MODEL_DIR = ARTIFACTS_DIR / "clarity_deberta_256_new_model_text"
 LABELS_PATH = ARTIFACTS_DIR / "clarity_label_mapping.json"
 
 

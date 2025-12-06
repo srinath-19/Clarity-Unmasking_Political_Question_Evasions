@@ -26,7 +26,7 @@ LABELS_PATH = ARTIFACTS_DIR / "clarity_label_mapping.json"
 MODEL_NAME = "microsoft/deberta-v3-base"
 OUTPUT_DIR = ARTIFACTS_DIR / "clarity_deberta_10"
 
-MAX_LENGTH = 384
+MAX_LENGTH = 256
 
 
 # ---------------- HELPERS ---------------- #

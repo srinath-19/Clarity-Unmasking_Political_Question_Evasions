@@ -14,7 +14,7 @@ import pandas as pd
 # =========================
 
 # Change this to wherever you put the folder
-MODEL_DIR = Path(r"C:\projects\Clarity_NLP_project\artifacts\multimodel_deberta")  # <-- EDIT THIS
+MODEL_DIR = Path(r"C:\projects\Clarity_NLP_project\artifacts\best_multimodel")  # <-- EDIT THIS
 
 
 # =========================
@@ -275,7 +275,7 @@ if __name__ == "__main__":
 
     # ---- 2) Uncomment this to run on a CSV ----
     csv_in = Path(r"C:\projects\Clarity_NLP_project\data\clarity_evasion_val.csv")   # must have 'question' and 'interview_answer'
-    csv_out = Path(r"C:\projects\Clarity_NLP_project\data\multi-model_predictions.csv")
+    csv_out = Path(r"C:\projects\Clarity_NLP_project\best_multi-model_predictions.csv")
     predict_csv(
         model=model,
         tokenizer=tokenizer,

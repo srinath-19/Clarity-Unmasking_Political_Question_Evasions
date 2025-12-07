@@ -1,0 +1,24 @@
+{
+  "label2id": {
+    "Claims ignorance": 0,
+    "Clarification": 1,
+    "Declining to answer": 2,
+    "Deflection": 3,
+    "Dodging": 4,
+    "Explicit": 5,
+    "General": 6,
+    "Implicit": 7,
+    "Partial/half-answer": 8
+  },
+  "id2label": {
+    "0": "Claims ignorance",
+    "1": "Clarification",
+    "2": "Declining to answer",
+    "3": "Deflection",
+    "4": "Dodging",
+    "5": "Explicit",
+    "6": "General",
+    "7": "Implicit",
+    "8": "Partial/half-answer"
+  }
+}

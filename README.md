@@ -139,7 +139,7 @@ Artifacts:
 
 ---
 
-## Results (example)
+## Results 
 
 From a recent run:
 
@@ -157,25 +157,67 @@ Clarity per-class on val:
 
 ---
 
-## How to run
+## 🚀 How to Run the Project
 
-### 1) Train
+### 1️⃣ Train the Clarity-Only Model
 
 ```bash
-python src/train_multitask.py
-``` 
+python src/train_clarity_classifier_deberta.py
+```
 
 This will:
 
-load train/val
+Load the clarity training/validation data
 
-warm-start from artifacts/clarity_deberta/ if present
+Train a DeBERTa-v3-base clarity classifier
 
-train with HF Trainer
+#### Save the checkpoint to:
 
-save weights + meta + tokenizer
+artifacts/clarity_deberta/
 
-### 2) Evaluate + full reports + export predictions
+#### Artifacts created here:
+
+- model.safetensors
+
+- config.json
+
+- tokenizer files
+
+These are required for the multitask warm-start.
+
+### 2️⃣ Train the Multitask (Clarity + Evasion) Model
+
+```bash
+python src/train_multitask.py
+```
+
+#### This script will:
+
+- Load clarity + evasion datasets
+
+Warm-start the encoder from:
+
+- artifacts/clarity_deberta/
+
+
+Train the multitask model (shared encoder + two classifier heads)
+
+#### Save outputs to:
+
+artifacts/multitask_deberta_clarity_weights/
+
+
+#### Files generated include:
+
+- multitask_deberta_state.pt
+
+- multitask_deberta_meta.json
+
+- tokenizer snapshot
+
+- training logs
+
+### 3️⃣ Evaluate the Multitask Model
 
 ```bash
 python src/eval_multitask_on_val.py
@@ -183,16 +225,35 @@ python src/eval_multitask_on_val.py
 
 This will:
 
-load - multitask_deberta_state.pt
+Load:
 
-load - multitask_deberta_meta.json
+- multitask_deberta_state.pt
 
-rebuild the model
+- multitask_deberta_meta.json
 
-print:
+- Rebuild the multitask model
 
-clarity report
-evasion report
-joint accuracy
+#### Print:
 
-save: val_predictions.csv
+- clarity classification report
+
+- evasion classification report
+
+- joint accuracy
+
+#### Export predictions to:
+
+artifacts/multitask_deberta_clarity_weights/val_predictions.csv
+
+
+The CSV contains:
+
+- question + answer text
+
+- true clarity/evasion labels
+
+- predicted labels
+
+- confidence scores
+
+# 

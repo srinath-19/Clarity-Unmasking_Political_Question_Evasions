@@ -143,17 +143,17 @@ Artifacts:
 
 From a recent run:
 
-- clarity_acc ≈ **0.896**
-- clarity_macro_f1 ≈ **0.882**
-- evasion_acc ≈ **0.583**
-- evasion_macro_f1 ≈ **0.471**
-- joint_acc ≈ **0.574**
+- clarity_acc ≈ **0.64**
+- clarity_macro_f1 ≈ **0.70**
+- evasion_acc ≈ **0.46**
+- evasion_macro_f1 ≈ **0.40**
+- joint_acc ≈ **0.42**
 
 Clarity per-class on val:
 
-- clarity_0: F1 ≈ 0.92  
-- clarity_1: F1 ≈ 0.86  
-- clarity_2: F1 ≈ 0.86  
+- Ambivalent: F1 ≈ 0.75  
+- Clear non-reply: F1 ≈ 0.61  
+- Clear reply: F1 ≈ 0.58  
 
 ---
 
@@ -254,6 +254,9 @@ The CSV contains:
 
 - predicted labels
 
+
+Please contact srinath.m1902@gmail.com if you want the model, I can send you the .zip.
 - confidence scores
 
 # 
+
